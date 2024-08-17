@@ -1,0 +1,21 @@
+Introduction to Java Architecture: JDK, JRE, and JVM
+
+The Java architecture comprises three primary components: the Java Development Kit (JDK), the Java Runtime Environment (JRE), and the Java Virtual Machine (JVM). Each plays a distinct role in the lifecycle of a Java application.
+
+1. Java Development Kit (JDK)
+  The Java Development Kit (JDK) is a software development kit used to develop Java applications. It provides the necessary tools and libraries to compile, debug, and execute Java programs. 
+  
+The JDK includes:
+Compiler (javac): The compiler converts Java source code (.java files) into bytecode (.class files). Bytecode is a platform-independent code that can be executed by the JVM.
+Java Runtime Environment (JRE): Included within the JDK, the JRE provides the libraries and the JVM required to run Java applications. While the JRE is essential for executing Java programs, it does not include development tools.
+Development Tools: The JDK provides additional tools such as javadoc for generating documentation, javap for disassembling class files, and jar for packaging Java applications into JAR (Java ARchive) files.
+Debugger (jdb): This tool helps developers diagnose and fix issues in their Java code by allowing them to set breakpoints, inspect variables, and control execution flow.
+
+2. Java Runtime Environment (JRE)
+  The Java Runtime Environment (JRE) is a runtime environment that provides the resources needed to run Java applications. It is a part of the JDK but can also be installed separately. 
+
+The JRE includes:
+Java Virtual Machine (JVM): The core component responsible for executing Java bytecode. It interprets or compiles bytecode into machine code specific to the underlying hardware and operating system.
+Standard Libraries: A set of pre-written classes and methods (e.g., java.lang, java.util, java.io) that developers can use to build Java applications. These libraries provide functionality for data structures, file handling, networking, and more.
+
+
