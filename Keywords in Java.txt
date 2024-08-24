@@ -17,6 +17,25 @@ Accessible without object instantiation: Static members can be accessed without 
 
 Associated with class, not objects: Static members are associated with the class, not with individual objects. This means that changes to a static member are reflected in all instances of the class, and that you can access static members using the class name rather than an object reference.
 
-Cannot access non-static members: Static methods and variables cannot access non-static members of a class, as they are not associated with any particular instance of the class.
+Cannot access non-static memb
+ers: Static methods and variables cannot access non-static members of a class, as they are not associated with any particular instance of the class.
 
 Can be overloaded, but not overridden: Static methods can be overloaded, which means that you can define multiple methods with the same name but different parameters. However, they cannot be overridden, as they are associated with the class rather than with a particular instance of the class.
+
+Static blocks
+If you need to do the computation in order to initialize your static variables, you can declare a static block that gets executed exactly once, when the class is first loaded.
+
+Static variables
+When a variable is declared as static, then a single copy of the variable is created and shared among all objects at the class level. Static variables are, essentially, global variables. All instances of the class share the same static variable.
+
+static block and static variables are executed in the order they are present in a program.
+
+Static methods
+When a method is declared with the static keyword, it is known as the static method. 
+
+They can only directly call other static methods.
+They can only directly access static data.
+They cannot refer to this or super in any way
+
+Static Classes 
+A class can be made static only if it is a nested class. We cannot declare a top-level class with a static modifier but can declare nested classes as static.
