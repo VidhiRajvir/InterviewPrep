@@ -1,0 +1,68 @@
+Classes and Objects in Java
+  A CLASS is a user defined blueprint or prototype from which objects are created. It represents the set of properties or methods that are common to all objects of one type.
+An object consists of : 
+1. State: It is represented by attributes of an object. It also reflects the properties of an object.
+2. Behavior: It is represented by methods of an object. It also reflects the response of an object with other objects.
+3. Identity: It gives a unique name to an object and enables one object to interact with other objects.
+
+Ways of creating an object in Java:
+1. Using new Keyword:
+ClassName object = new ClassName();  
+By using the new keyword, we can also invoke the constructor (default or parametrized) of the class.
+
+2. Using clone() Method:
+The clone() method is the method of Object class. It creates a copy of an object and returns the same copy.The JVM creates a new object when the clone() method is invoked.Note that it does not call any constructor. We must implement the Cloneable interface while using the clone() method. The method throws CloneNotSupportedException exception if the object's class does not support the Cloneable interface.
+
+protected Object clone() throws CloneNotSupportedException  
+
+ClassName newobject = (ClassName) oldobject.clone();  
+
+3. Using newInstance() Method of Class class
+The newInstance() method of the Class class is also used to create an object. It calls the default constructor to create the object. It returns a newly created instance of the class represented by the object. It internally uses the newInstance() method of the Constructor class.
+
+public T newInstance() throws InstantiationException, IllegalAccessException 
+
+ClassName object = ClassName.class.newInstance();  
+
+4. Using newInstance() Method of Constructor class
+It is similar to the newInstance() method of the Class class. It is known as a reflective way to create objects. The method is defined in the Constructor class which is the class of java.lang.reflect package. We can also call the parameterized constructor and private constructor by using the newInstance() method. It is widely preferred in comparison to newInstance() method of the Class class.
+
+public T newInstance(Object... initargs) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException  
+
+The method parses an array of Objects as an argument. The values of primitive types wrapped in a wrapper Object of the appropriate type. It returns a new object created by calling the constructor.
+
+Constructor<Employee> constructor = Employee.class.getConstructor();   
+Employee emp3 = constructor.newInstance();  
+
+5. Using Deserialization
+In Java, serialization is the process of converting an object into a sequence of byte-stream. The reverse process (byte-stream to object) of serialization is called deserialization. The JVM creates a new object when we serialize or deserialize an object. It does not use constructor to create an object. While using deserialization, the Serializable interface (marker interface) must be implemented in the class.
+
+Serialization: The writeObject() method of the ObjectOutputStream class is used to serialize an object. It sends the object to the output stream.
+
+public final void writeObject(object x) throws IOException  
+
+Deserialization: The method readObject() of ObjectInputStream class is used to deserialize an object. It references objects out of a stream.
+
+public final Object readObject() throws IOException,ClassNotFoundException  
+
+//Creating the object    
+Employee emp = new Employee(198054,"Andrew");    
+//Creates a stream and writes the object    
+FileOutputStream fout=new FileOutputStream("employee.txt");    
+ObjectOutputStream out=new ObjectOutputStream(employeeout);    
+out.writeObject(emp);    
+out.flush();    
+//closes the output stream    
+out.close();    
+
+//Creating a stream to read the object    
+ObjectInputStream in=new ObjectInputStream(new FileInputStream("employee.txt"));    
+Employee e=(Employee)in.readObject();    
+//prints the data of the serialized object    
+System.out.println(e.empid+" "+e.empname);    
+//closing the input stream    
+in.close();    
+
+In the above five methods, we have noticed that the new keyword and both newInstance() methods use the constructor to create objects, while the rest two methods do not use the constructor.
+
+Reference : https://www.javatpoint.com/how-to-create-object-in-java
