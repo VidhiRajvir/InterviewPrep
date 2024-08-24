@@ -125,3 +125,34 @@ Increases code reusability by allowing objects of different classes to be treate
 Improves readability and maintainability of code by reducing the amount of code that needs to be written and maintained.
 Supports dynamic binding, enabling the correct method to be called at runtime, based on the actual class of the object.
 Enables objects to be treated as a single type, making it easier to write generic code that can handle objects of different types.
+
+
+Can we have a function in the interface with a body ?
+Yes. Interfaces can implement methods since Java 8. To do so you must add the “default” keyword to the method's signature.
+
+Can we override the default function in the implementing class ? OR How do we call the default methods of an interface in the implementation class ? 
+Yes, in Java, implementing classes can override default methods in interfaces to provide a different implementation.
+If two interfaces have same name default method , we need to override that method in our implementation class . Its a rule .
+
+ We override the default function in the class and inside its body use the <interfaceName>.super.<methodName>()
+@Override annontation is used which indicates that the method is overriden
+
+ If we are overriding a default function in our implementation class , then how can we call the default function of the interface ? 
+
+How to access the variables in our implementation class which have been defined in the interface ? Can we change its value in the implementation class and Why ? 
+No we cant change a variable as all the variable are public static final in an interface
+
+ If a class A is implementing an interface I and extending a class C . Which is correct ?
+When a class implements an interface and extends a class, the keyword order is important. "Extends" must come before "implements". For example, "public class ClassName extends AbstractClassName implements Interface".
+
+If my class A extends interface B and interface C , both having same default method “power” . Even if my object of class A does not call power and does not overrides the default method power , will there be any issues and why ?
+We need to override the method to avoid ambiguity
+
+Is it possible that in parent class , function A has protected access modifier  In child class which extends parent , while overriding , can we give access modifier of A as :
+
+(i) public 
+
+(ii) private
+private as we can give weaker privilages to the sub class
+
+
