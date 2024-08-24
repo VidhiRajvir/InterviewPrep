@@ -1,1 +1,78 @@
+Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism etc in programming. 
+The main aim of OOP is to bind together the data and the functions that operate on them so that no other part of the code can access this data except that function.
+
+1. Abstraction:
+Data Abstraction is the property by virtue of which only the essential details are displayed to the user. The trivial or the non-essentials units are not displayed to the user. Ex: A car is viewed as a car rather than its individual components.
+
+There are two ways to achieve abstraction in java
+
+Abstract class (0 to 100%)
+Interface (100%)
+
+Abstract class in Java
+A class which is declared as abstract is known as an abstract class. It can have abstract and non-abstract methods. It needs to be extended and its method implemented. It cannot be instantiated.
+
+An abstract class must be declared with an abstract keyword.
+It can have abstract and non-abstract methods.
+It cannot be instantiated.
+It can have constructors and static methods also.
+It can have final methods which will force the subclass not to change the body of the method.
+
+Abstract Method in Java
+
+A method which is declared as abstract and does not have implementation is known as an abstract method.
+
+An abstract class can have a data member, abstract method, method body (non-abstract method), constructor, and even main() method.
+
+The abstract class can also be used to provide some implementation of the interface. In such case, the end user may not be forced to override all the methods of the interface.
+
+Interface
+An interface in Java is a blueprint of a class. It has static constants and abstract methods. 
+There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+Java Interface also represents the IS-A relationship.
+
+Since Java 8, we can have default and static methods in an interface.
+Since Java 9, we can have private methods in an interface.
+
+An interface is declared by using the interface keyword. It provides total abstraction; means all the methods in an interface are declared with the empty body, and all the fields are public, static and final by default. A class that implements an interface must implement all the methods declared in the interface.
+
+A class extends another class, an interface extends another interface, but a class implements an interface.
+
+Q) Multiple inheritance is not supported through class in java, but it is possible by an interface, why?
+As we have explained in the inheritance chapter, multiple inheritance is not supported in the case of class because of ambiguity. However, it is supported in case of an interface because there is no ambiguity. It is because its implementation is provided by the implementation class.
+
+Q) What is marker or tagged interface?
+An interface which has no member is known as a marker or tagged interface, for example, Serializable, Cloneable, Remote, etc. They are used to provide some essential information to the JVM so that JVM may perform some useful operation.
+
+The serialization interface has no methods or fields and serves only to identify the semantics of being serializable.
+When traversing a graph, an object may be encountered that does not support the Serializable interface. In this case the NotSerializableException will be thrown and will identify the class of the non-serializable object
+
+Classes that require special handling during the serialization and deserialization process must implement special methods with these exact signatures:
+  private void writeObject(java. io. ObjectOutputStream out)
+      throws IOException
+  private void readObject(java. io. ObjectInputStream in)
+      throws IOException, ClassNotFoundException;
+  private void readObjectNoData()
+      throws ObjectStreamException;
+
+Nested Interface in Java
+Note: An interface can have another interface which is known as a nested interface. 
+
+Difference between Abstract class and Interface:
+1) Abstract class can have abstract and non-abstract methods.	Interface can have only abstract methods. Since Java 8, it can have default and static methods also.
+2) Abstract class doesn't support multiple inheritance.	Interface supports multiple inheritance.
+3) Abstract class can have final, non-final, static and non-static variables.	Interface has only static and final variables.
+4) Abstract class can provide the implementation of interface.	Interface can't provide the implementation of abstract class.
+5) The abstract keyword is used to declare abstract class.	The interface keyword is used to declare interface.
+6) An abstract class can extend another Java class and implement multiple Java interfaces.	An interface can extend another Java interface only.
+7) An abstract class can be extended using keyword "extends".	An interface can be implemented using keyword "implements".
+8) A Java abstract class can have class members like private, protected, etc.	Members of a Java interface are public by default.
+9)Example:
+public abstract class Shape{
+public abstract void draw();
+}	Example:
+public interface Drawable{
+void draw();
+}
+
 
