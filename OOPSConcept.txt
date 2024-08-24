@@ -75,4 +75,29 @@ public interface Drawable{
 void draw();
 }
 
+2.Encapsulation:
+Encapsulation describes bundling data and methods that work on that data within one unit, like a class in Java. We often often use this concept to hide an object’s internal representation or state from the outside. This is called information hiding.
+A getter method retrieves an attribute and a setter method changes it. Depending on the methods that you implement, you can decide if an attribute can be read and changed. You may also control if the attribute is read-only or not visible at all.
+
+3. Inheritence 
+Inheritance is an important pillar of OOP(Object-Oriented Programming). It is the mechanism in java by which one class is allowed to inherit the features(fields and methods) of another class. 
+
+Types of Inheritance in Java
+
+Single Inheritance - In single inheritance, a sub-class is derived from only one super class. It inherits the properties and behavior of a single-parent class. Sometimes it is also known as simple inheritance.
+MultiLevel Inheritance - In multi-level inheritance, a class is derived from a class which is also derived from another class is called multi-level inheritance.
+Hierarchical Inheritance - If a number of classes are derived from a single base class, it is called hierarchical inheritance.
+Multiple Inheritance - Java does not support multiple inheritances due to ambiguity.
+Hybrid Inheritance(Through Interfaces)
+
+Inheritance is a mechanism of driving a new class from an existing class. The existing (old) class is known as base class or super class or parent class. The new class is known as a derived class or sub class or child class. It allows us to use the properties and behavior of one class (parent) in another class (child).
+
+Inheritance provides the reusability of code especially when there is a large scale of code to reuse. It also establishes the relationship between different classes that is known as a Is-a relationship.
+
+Constructor cannot be inherited in Java.
+Private members do not get inherited in Java.
+Cyclic inheritance is not permitted in Java.
+Assign parent reference to child objects.
+Constructors get executed because of super() present in the constructor.
+
 
