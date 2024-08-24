@@ -1,1 +1,6 @@
+Access Modifier : Defines access type of the method i.e. from where it can be accessed in your application. In Java, there 4 type of the access specifiers. 
 
+public: accessible in all class in your application.
+protected: accessible within the package in which it is defined and in its subclass(es)(including subclasses declared outside the package)
+private: accessible only within the class in which it is defined.
+default (declared/defined without using any modifier): accessible within same class and package within which its class is defined.
