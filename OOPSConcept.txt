@@ -24,6 +24,8 @@ A method which is declared as abstract and does not have implementation is known
 
 An abstract class can have a data member, abstract method, method body (non-abstract method), constructor, and even main() method.
 
+
+
 The abstract class can also be used to provide some implementation of the interface. In such case, the end user may not be forced to override all the methods of the interface.
 
 Interface
@@ -154,5 +156,23 @@ Is it possible that in parent class , function A has protected access modifier  
 
 (ii) private
 private as we can give weaker privilages to the sub class
+
+ Does an interface implements other interface or extends other interface ?
+
+Interface extends another interface
+
+Can an interface extend a class and why?
+
+An interface cannot extend a class but it can extend another interface in the same way that a class can extend another class.
+
+What is the difference between Abstract Class and Interface ?
+
+Abstract clas is partial abstraction and interface is full abstraction
+
+ Can we override default methods of an interface in other interface which extends it ?
+
+YES we can
+
+
 
 
