@@ -1,1 +1,5 @@
-
+1.Configure our project in spring intializer website: https://start.spring.io/
+2.select the configuration for your project
+3.download the zip
+4.Unzip the file
+5.import the maven project into your IDE
